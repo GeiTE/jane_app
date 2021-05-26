@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	<!-- 自适应显示器宽度 -->
+	<title>简绘-播放器</title>
+	<link rel="stylesheet" href="./css/bootstrap.css">	<!-- 引用bootstrap样式 -->
+	<link rel="stylesheet" href="./css/all.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div id="top_nav" class="playvideo_nav">
+			<div class="container" id="nav">
+				<img src="./images/icon/menu.png" alt="" id="menu">
+				<ul class="nav nav-tabs">		<!-- 导航 -->
+					<li role="presentation" ><a href="./index.html">Jane painting</a></li>
+					<li role="presentation"><a href="./gallery.html">画廊</a></li>
+					<li role="presentation"><a href="./video.html">视频</a></li>
+					<li role="presentation"><a href="./Canvas.html">Canvas绘画</a></li>
+					<li role="presentation"><a href="./Aboud.html">关于</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- <div style="width: 100%;height: 705px;"> -->
+			<div class="container embed-responsive embed-responsive-16by9" id="play_video_data">
+
+			</div>
+		<!-- </div> -->
+		
+		<!-- footer -->
+		<div id="footer_box">
+			<div class="container">
+				<div id="footer_top">
+					<a id="back_top">回到顶部</a>
+				</div>
+				<div id="footer_content">
+					<div class="row">
+						<div class="col-md-3">
+							<div id="footer_logo">
+								Jane <br> spinget
+							</div>
+							<ul class="list-unstyled">
+								<li><a href="">画廊</a></li>
+								<li><a href="">视频</a></li>
+								<li><a href="">绘画</a></li>
+								<li><a href="">关于</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<div id="map">
+	
+							</div>
+							<h4>广东创新科技职业学院</h4>
+							<p>内容内容内容内容内容内容内容内容内容内容</p>
+						</div>
+						<div class="col-md-3">
+							<h5>友情链接</h5>
+							<p><a href="">artic.adu</a></p>
+							<p><a href="">哔哩哔哩</a></p>
+							<p><a href="">广东创新科技职业学院</a></p>
+						</div>
+					</div>
+				</div>
+				<div id="footer_footer">
+					<p>版权信息</p>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+	</div>
+	<script src="./js/jquery-3.4.1.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	<script src="./js/back_top.js"></script>
+	<script>
+		$(function(){
+			if(sessionStorage["name"]){
+				var value = sessionStorage["name"];
+				console.log(value);
+				$("#play_video_data").append(function(){
+					return`
+					<video controls="console" class="embed-responsive-item">
+						<source src="./video/`+value+`.mp4" type="video/mp4"/>
+						你的浏览器不支持H5视频
+					</video>
+					`
+				})
+			}
+		});
+	</script>		
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	<!-- 自适应显示器宽度 -->
+	<title>简绘</title>
+	<link rel="stylesheet" href="./css/bootstrap.css">	<!-- 引用bootstrap样式 -->
+	<link rel="stylesheet" href="./css/baguetteBox.min.css">
+	<link rel="stylesheet" href="./css/all.css">
+</head>
+<body>
+	<div class="container-fluid">
+
+		<!-- 头部导航 -->
+		<div id="top_nav">
+			<div class="top_img" style="background: url(./images/top_img/1.jpg);">
+				<!--nav-->
+				<div class="container" id="nav">
+					<img src="./images/icon/menu.png" alt="" id="menu">
+					<ul class="nav nav-tabs pull-right">		<!-- 导航 -->
+						<li role="presentation" class="active"><a href="#">Jane painting</a></li>
+						<li role="presentation"><a href="./gallery.html">画廊</a></li>
+						<li role="presentation"><a href="./video.html">视频</a></li>
+						<li role="presentation"><a href="./Canvas.html">绘画</a></li>
+						<li role="presentation"><a href="./Aboud.html">关于</a></li>
+					</ul>
+				</div>
+				<!--nav-->
+				<div class="container"><h2>简绘<br><small>Jane painting</small></h2></div>
+			</div>
+		</div>
+		<!-- 头部导航 -->
+
+		<!-- 主体内容 -->
+			<!-- 画廊 -->
+			<div id="gallery_box">
+				<div class="container">
+					<div class="title"><h4>画廊&nbsp;<small>gallery</small></h4></div>
+					<div class="tz-gallery">
+						<div class="row">
+						
+						</div>	
+					</div>
+				</div>
+			</div>
+			<!-- 画廊 -->
+
+			<!-- 视频 -->
+			<div id="video_box">
+				<div class="container">
+					<div class="title"><h4>视频&nbsp;<small>video</small></h4></div>
+					<div class="tz-video">
+						<div class="row">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 视频 -->
+			
+			<!-- 互动 -->
+			<div id="artist_box">
+				<div class="container">
+					<div class="title"><h4>互动&nbsp;<small>Interaction</small></h4></div>
+					<div class="tz-canvas">
+						<div class="row">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 互动 -->
+			
+			<!-- 订阅 -->
+			<div id="subscribe_box">
+				<div class="container">
+					<div class="title"><h4>关于&nbsp;<small>About Us</small></h4></div>
+					<div class="tz-about">
+						<p>
+							<p class="text"><strong class="lead tz-about-title">简绘</strong>本网页由余浩源独自设计以及制作，想要向外输出的是关于绘画的各种，另外结合H5的的Canvas实现可爱的动漫展示和绘画功能。开发本网页使用了bootstrpt框架、图片展示使用了jqeryMasonry，初步UI设计使用Axure PR和adoube XD，
+							图片使用PS编辑，本网页见能够自适应网页大小、视频播放器、Canvas绘画出的可爱动漫形象、美观的图片展示、反馈功能。</p>
+							<p class="text-right">2021年2月12日</p>
+							<p class="text-right">余浩源</p>
+						</p>
+					</div>
+				</div>
+			</div>
+		   <!-- 订阅 -->
+			
+		<!-- 主体内容 -->
+
+		<!-- footer -->
+		<div id="footer_box">
+			<div class="container">
+				<div id="footer_top">
+					<a id="back_top">回到顶部</a>
+				</div>
+				<div id="footer_content">
+					<div class="row">
+						<div class="col-md-3">
+							<div id="footer_logo">
+								Jane <br> spinget
+							</div>
+							<ul class="list-unstyled">
+								<li><a href="">画廊</a></li>
+								<li><a href="">视频</a></li>
+								<li><a href="">绘画</a></li>
+								<li><a href="">关于</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<div id="map">
+	
+							</div>
+							<h4>广东创新科技职业学院</h4>
+							<p>内容内容内容内容内容内容内容内容内容内容</p>
+						</div>
+						<div class="col-md-3">
+							<h5>友情链接</h5>
+							<p><a href="">artic.adu</a></p>
+							<p><a href="">哔哩哔哩</a></p>
+							<p><a href="">广东创新科技职业学院</a></p>
+						</div>
+					</div>
+				</div>
+				<div id="footer_footer">
+					<p>版权信息</p>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+	</div>
+
+	<!-- 引用JQ and bootstrap --> 
+	<script src="./js/jquery-3.4.1.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	<script src="./js/baguetteBox.min.js"></script>
+	<script src="./js/back_top.js"></script>
+	<script src="./js/video_jump.js"></script>
+	<script src="./js/Jane_data/home_data.js"></script>
+	<script type="text/javascript">
+		window.addEventListener('load',function(){
+			var maxwidth = 15;
+			$("#gallery_box .home_gallery_sketch").each(function(){
+				var text = $(this).text();
+				if (text.length > maxwidth) {
+				console.log(1);
+				$(this).html(text.substring(0, maxwidth));
+				$(this).html($(this).html()+"...");
+			}
+			});
+			baguetteBox.run('.tz-gallery');
+			$(".tz-canvas>div>div>div>a").click(function(){		//点击跳转到框架，传送相应的name
+				if (window.sessionStorage) {
+					sessionStorage.name = $(this).attr("name");
+					location.href = "./playinteraction.html";
+				}else{
+					alert("NOTStorage");		//浏览器不支持数据存储技术
+				}
+			});
+			$(".tz-video>div>div>div>a").click(function(){		//点击跳转到框架，传送相应的name
+				if (window.sessionStorage) {
+					sessionStorage.name = $(this).attr("name");
+					location.href = "./playvideo.html";
+				}else{
+					alert("NOTStorage");		//浏览器不支持数据存储技术
+				}
+			});
+		})
+	</script>
+</body>
+</html>

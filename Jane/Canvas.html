@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	<!-- 自适应显示器宽度 -->
+	<title>简绘-Canvas</title>
+	<link rel="stylesheet" href="./css/bootstrap.css">	<!-- 引用bootstrap样式 -->
+	<link rel="stylesheet" href="./css/baguetteBox.min.css">
+	<link rel="stylesheet" href="./css/all.css">
+	<link rel="stylesheet" href="./css/painting.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<!-- 头部导航 -->
+		<div id="top_nav">
+			<div class="top_img" style="background: url(./images/top_img/1.jpg);">
+				<!--nav-->
+				<div class="container" id="nav">
+					<img src="./images/icon/menu.png" alt="" id="menu">
+					<ul class="nav nav-tabs pull-right">		<!-- 导航 -->
+						<li role="presentation"><a href="./index.html">Jane painting</a></li>
+						<li role="presentation"><a href="./gallery.html">画廊</a></li>
+						<li role="presentation"><a href="./video.html">视频</a></li>
+						<li role="presentation" class="active"><a href="./Canvas.html">绘画</a></li>
+						<li role="presentation"><a href="./Aboud.html">关于</a></li>
+					</ul>
+				</div>
+				<!--nav-->
+				<div class="top_img""><div class="container"><h2>绘画<br><small>Canvas</small></h2></div></div>
+			</div>
+		</div>
+		<!-- 头部导航 -->
+		
+		<!-- 主体内容 -->
+		<div id="painting_box">
+			<div class="top_row">
+				<div class="create shezhi">新&nbsp;建
+					<div class="xinjian">
+						<h6>画 板 尺 寸</h6>
+						<div class="xinjian_width">
+							<span>宽</span>
+							<input type="number" max="1070" min="500" value="500">
+						</div>
+						<div class="xinjian_height">
+							<span>高</span>
+							<input type="number" max="648" min="300" value="300">
+						</div>
+						<input type="button" name="queding" value="确定" id="ding">
+						<div class="xinjian_before">+</div>
+					</div>
+				</div>
+				<div class="clear shezhi">清&nbsp;空</div>
+				<div class="back shezhi">撤&nbsp;销</div>
+				<div class="save shezhi">保&nbsp;存</div>
+				<div class="cut shezhi" data="cut">剪&nbsp;切</div>
+				<div class="copy shezhi">复&nbsp;制</div>
+			</div>
+			<div class="pain_container">
+				<div class="pain_row">
+					<ul name="" class="type">
+						<li class="line typeactive" data="line" title="直线工具"><img src="./images/painting_img/直线.png" alt=""></li>
+						<li class="rect" data="rect" title="矩形工具"><img src="./images/painting_img/矩形.png" alt=""></li>
+						<li class="circle" data="circle" title="圆形工具"><img src="./images/painting_img/圆形.png" alt=""></li>
+						<li class="pen" data="pen" title="笔"><img src="./images/painting_img/pen.png" alt=""></li>
+						<li class="poly" data="poly" title="多边形工具"><img src="./images/painting_img/正三角形.png" alt="">
+							<div class="bian"><span>边数</span><input type="number" name="number" min="3" value="3" max="15"></div></li>
+						<li class="eraser" data="eraser" title="橡皮擦"><img src="./images/painting_img/iconfont_橡皮擦.png" alt=""></li>
+					</ul>
+					<div class="space"></div>
+					<ul class="style">
+						<li class="stroke styleactive" title="描边"><img src="./images/painting_img/收藏描边.png" alt=""></li>
+						<li class="fill" title="填充"><img src="./images/painting_img/评级.png" alt=""></li>
+					</ul>
+					<div class="space"></div>
+					<div class="box" title="颜色"><input type="color" name="color" value="#000000"></div>
+					<div class="box linewidth" title="粗细"><input type="number" name="number" value="1" max="150" min="1"></div>
+					
+				</div>
+			</div>
+			<canvas width="1070" height="648"></canvas>
+		</div>
+		<!-- 主体内容 -->
+		
+		<!-- footer -->
+		<div id="footer_box">
+			<div class="container">
+				<div id="footer_top">
+					<a id="back_top">回到顶部</a>
+				</div>
+				<div id="footer_content">
+					<div class="row">
+						<div class="col-md-3">
+							<div id="footer_logo">
+								Jane <br> spinget
+							</div>
+							<ul class="list-unstyled">
+								<li><a href="">画廊</a></li>
+								<li><a href="">视频</a></li>
+								<li><a href="">绘画</a></li>
+								<li><a href="">关于</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<div id="map">
+	
+							</div>
+							<h4>广东创新科技职业学院</h4>
+							<p>内容内容内容内容内容内容内容内容内容内容</p>
+						</div>
+						<div class="col-md-3">
+							<h5>友情链接</h5>
+							<p><a href="">artic.adu</a></p>
+							<p><a href="">哔哩哔哩</a></p>
+							<p><a href="">广东创新科技职业学院</a></p>
+						</div>
+					</div>
+				</div>
+				<div id="footer_footer">
+					<p>版权信息</p>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+	</div>
+	<a href="" id="canvas_href" download="canvas.png"/>
+
+	<!-- 引用JQ and bootstrap --> 
+	<script src="./js/jquery-3.4.1.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	<script src="./js/video_jump.js"></script>
+	<script src="./js/back_top.js"></script>
+	<script src="./js/painting.js"></script>
+	<script src="./js/painting_2.js"></script>
+</script>
+</body>
+</html>

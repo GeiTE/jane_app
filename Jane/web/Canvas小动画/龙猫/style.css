@@ -1,0 +1,1 @@
+body {  display: flex;  justify-content: center;  align-items: center;  height: 100vh;  background: radial-gradient(circle at center, #777645, #aead74);}body canvas {  background: linear-gradient(to bottom, transparent 75%, #aead74 75%, #979658), radial-gradient(circle at bottom, #c4e0e5, #5aa8b6);  border-radius: 100% 100% 0 0;  box-shadow: 0 0 100px 0 #87864f;}
